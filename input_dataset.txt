@@ -1,0 +1,4 @@
+The input dataset available at several online resources:
+- https://github.com/Bin-Cao/SimXRD
+- https://www.kaggle.com/competitions/simxrd/overview/citation/abstract
+- https://www.kaggle.com/datasets/superredworld/crystals-diffraction
