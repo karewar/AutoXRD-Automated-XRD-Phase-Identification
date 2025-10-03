@@ -1,56 +1,48 @@
-AutoXRD
+# AutoXRD  
+**AI-powered End-to-End Phase & Composition Identification from XRD**  
 
-AI-powered End-to-End Phase & Composition Identification from XRD
+> From raw XRD patterns to actionable phase and composition insights — fully automated.
 
-From raw XRD patterns to actionable phase and composition insights — fully automated.
+---
 
-📌 Project Overview
+## 📌 Project Overview  
+**AutoXRD** is an AI application that identifies crystalline phases and estimates approximate compositions directly from raw 1D X-ray diffraction (XRD) data.  
 
-AutoXRD is an AI application that identifies crystalline phases and estimates approximate compositions directly from raw 1D X-ray diffraction (XRD) data.
+It eliminates tedious manual pre/post-processing (baseline correction, smoothing, peak picking, phase matching), and generates ready-to-use reports with:  
+- Annotated diffractograms  
+- Phase list with probabilities  
+- Estimated abundances  
+- Confidence scores  
 
-It eliminates tedious manual pre/post-processing (baseline correction, smoothing, peak picking, phase matching), and generates ready-to-use reports with:
+---
 
-Annotated diffractograms
+## 🎯 Target Audience  
+- **Materials scientists & crystallographers** (academic labs, industrial R&D)  
+- **High-throughput screening teams** (batteries, catalysts, metallurgy)  
+- **QC/Service labs** (fast phase ID, reproducible reports)  
 
-Phase list with probabilities
+---
 
-Estimated abundances
+## 🚀 Key Features  
+- ✅ Single-click phase identification from raw 1D XRD data  
+- ✅ Automated report generation (PDF/HTML)  
+- ✅ Mixture handling & uncertainty estimates  
+- ✅ Batch processing & API access  
+- ✅ Integration with existing pipelines  
 
-Confidence scores
+---
 
-🎯 Target Audience
+## 🛠️ Tech Stack  
+- **ML/DL:** PyTorch (1D CNN / Transformer encoders)  
+- **Materials Science:** pymatgen, ASE  
+- **Backend/API:** FastAPI  
+- **Frontend:** Streamlit / React  
+- **Deployment:** Docker  
 
-Materials scientists & crystallographers (academic labs, industrial R&D)
+---
 
-High-throughput screening teams (batteries, catalysts, metallurgy)
-
-QC/Service labs (fast phase ID, reproducible reports)
-
-🚀 Key Features
-
-✅ Single-click phase identification from raw 1D XRD data
-
-✅ Automated report generation (PDF/HTML)
-
-✅ Mixture handling & uncertainty estimates
-
-✅ Batch processing & API access
-
-✅ Integration with existing pipelines
-
-🛠️ Tech Stack
-
-ML/DL: PyTorch (1D CNN / Transformer encoders)
-
-Materials Science: pymatgen, ASE
-
-Backend/API: FastAPI
-
-Frontend: Streamlit / React
-
-Deployment: Docker
-
-📂 Repository Structure
+## 📂 Repository Structure  
+```
 AutoXRD/
 │
 ├── data/               # Example dataset (sample_xrd.csv)
@@ -64,73 +56,88 @@ AutoXRD/
 ├── README.md           # Project description
 ├── .gitignore
 └── LICENSE
+```
 
-⚡ Installation
+---
 
-Clone the repo:
+## ⚡ Installation  
 
+1. Clone the repo:  
+```bash
 git clone https://github.com/<username>/AutoXRD.git
 cd AutoXRD
+```
 
-
-Install dependencies:
-
+2. Install dependencies:  
+```bash
 pip install -r requirements.txt
+```
 
-▶️ Usage
-Train the model
+Or with conda:  
+```bash
+conda create -n autoxrd python=3.10
+conda activate autoxrd
+pip install -r requirements.txt
+```
+
+---
+
+## ▶️ Usage  
+
+### Train the model  
+```bash
 python train.py
+```
 
-Run the demo app
+### Run the demo app  
+```bash
 streamlit run app.py
+```
 
-
-Upload a CSV file with columns:
-
+Upload a CSV file with columns:  
+```
 theta,intensity
+```
 
+You’ll see:  
+- XRD diffractogram (plotted)  
+- Predicted phases (probabilities)  
+- Estimated abundances  
 
-You’ll see:
+---
 
-XRD diffractogram (plotted)
-
-Predicted phases (probabilities)
-
-Estimated abundances
-
-📊 Example Output
-
-Predicted Phases (probabilities):
-
+## 📊 Example Output  
+**Predicted Phases (probabilities):**  
+```
 [0.82, 0.12, 0.05, 0.01, 0.03]
+```  
 
-
-Predicted Abundances:
-
+**Predicted Abundances:**  
+```
 [0.60, 0.20, 0.10, 0.05, 0.05]
+```  
 
-📈 Evaluation Metrics
+---
 
-Phase ID: Precision, Recall, F1-score, Top-N accuracy
+## 📈 Evaluation Metrics  
+- **Phase ID:** Precision, Recall, F1-score, Top-N accuracy  
+- **Abundance estimation:** Mean Absolute Error (MAE)  
+- **Robustness:** Performance across noisy & shifted data  
 
-Abundance estimation: Mean Absolute Error (MAE)
+---
 
-Robustness: Performance across noisy & shifted data
+## 🔮 Future Roadmap  
+- Integration with LIMS  
+- User feedback retraining loop  
+- Rietveld refinement suggestions  
+- SaaS + Dockerized deployment  
 
-🔮 Future Roadmap
+---
 
-Integration with LIMS
+## 🤝 Contributing  
+Pull requests are welcome! For major changes, please open an issue first to discuss what you’d like to improve.  
 
-User feedback retraining loop
+---
 
-Rietveld refinement suggestions
-
-SaaS + Dockerized deployment
-
-🤝 Contributing
-
-Pull requests are welcome! For major changes, please open an issue first to discuss what you’d like to improve.
-
-📜 License
-
-This project is licensed under the MIT License.
+## 📜 License  
+This project is licensed under the **MIT License**.  
